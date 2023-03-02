@@ -24,8 +24,8 @@ function init(sequelize){
 		sequelize,
 		tableName: 'ERP_001T00U01'
 	})
+	Profile.hasOne(User, {as: 'user'});
 }
 
-Profile.belongsTo(User, {as: 'user'});
 
 module.exports = {Profile, init};

@@ -6,7 +6,7 @@ class Status extends Model{}
 function init(sequelize){
 	Status.init({
 		status: {type: DataTypes.STRING, primaryKey: true},
-		desc: {type: DataTypes.STRING},
+		description: {type: DataTypes.STRING},
 	}, {
 		sequelize,
 		tableName: 'ERP_001T00I00'
