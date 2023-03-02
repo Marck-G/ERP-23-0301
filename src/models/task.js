@@ -16,6 +16,7 @@ function init(sequelize){
 		tableName: 'ERP_001T00U10'
 	})
 	Task.belongsTo(User, {as: 'manager'});
+	Task.belongsTo(User, {as: 'crafter'});
 	Task.belongsTo(User, {as: 'worker'});
 	Task.hasMany(Document, {as: 'documents'});
 	Task.hasOne(Task, {as: 'father'});
