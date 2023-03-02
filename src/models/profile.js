@@ -1,4 +1,5 @@
-const { Model, DataTypes, Sequelize } = require("sequelize")
+const { Model, DataTypes, Sequelize } = require("sequelize");
+const { User } = require("./user");
 
 class Profile extends Model{}
 
@@ -8,6 +9,7 @@ class Profile extends Model{}
  */
 function init(sequelize){
 	Profile.init({
+		uid: {type: DataTypes.STRING, primaryKey: true},
 		firstName:{
 			type: DataTypes.STRING,
 			allowNull: false
@@ -24,5 +26,6 @@ function init(sequelize){
 	})
 }
 
+Profile.belongsTo(User, {as: 'user'});
 
 module.exports = {Profile, init};

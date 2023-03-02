@@ -4,6 +4,7 @@ class User extends Model{}
 
 function init(sequelize){
 	User.init({
+		uid: {type: DataTypes.STRING, primaryKey: true},
 		userName: {type: DataTypes.STRING},
 		pass: {type: DataTypes.STRING},
 		email: {type: DataTypes.STRING},
@@ -13,3 +14,5 @@ function init(sequelize){
 		tableName: 'ERP_001T00U00'
 	})
 }
+
+module.exports = {User, init};
