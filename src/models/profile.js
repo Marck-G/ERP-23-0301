@@ -18,13 +18,12 @@ function init(sequelize){
 		familyName2:{ type: DataTypes.STRING},
 		nif:{ type: DataTypes.STRING},
 		puesto:{ type: DataTypes.STRING},
-		encargado:{ type: DataTypes.STRING},
 		
 	}, {
 		sequelize,
 		tableName: 'ERP_001T00U01'
 	})
-	Profile.hasOne(User, {as: 'user'});
+	Profile.hasOne(User, {as: 'profile'});
 }
 
 

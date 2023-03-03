@@ -10,7 +10,7 @@ function init(sequelize){
 		name: {type: DataTypes.STRING},
 		code: {type: DataTypes.STRING},
 		description: {type: DataTypes.STRING},
-		admin: {type: DataTypes.STRING},
+		hours: {type: DataTypes.INTEGER}
 	}, {
 		sequelize,
 		tableName: 'ERP_001T00U02'
