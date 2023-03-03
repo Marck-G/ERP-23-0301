@@ -5,7 +5,7 @@
  */
 function generateResponse(){
 	return {
-		status: 400,
+		status: 200,
 		succes: true,
 		data: null
 	}
